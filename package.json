@@ -1,0 +1,20 @@
+{
+   "name": "animate-embed-images",
+   "main": "animate-embed-images.js",
+   "version": "1.0.1",
+   "author": {
+      "url": "https://github.com/tpkn/"
+   },
+   "dependencies": {
+		"base64-img": "latest"
+   },
+   "repository": "https://github.com/tpkn/animate-embed-images",
+   "license": "MIT",
+   "keywords": [
+      "adobe",
+      "animate",
+      "embed",
+      "images",
+      "base64"
+   ]
+}
