@@ -1,6 +1,5 @@
 
-Module for Adobe Animate that inserts image assets inside js file
-
+Helpful stuff when you need to get single html without external files. Maybe some day Adobe Animate will add this feature.
 
 ![preview](https://raw.githubusercontent.com/tpkn/animate-embed-images/master/preview.png)
 
