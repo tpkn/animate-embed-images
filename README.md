@@ -1,9 +1,12 @@
 
+Module for Adobe Animate that inserts image assets inside js file
+
+
 ![preview](https://raw.githubusercontent.com/tpkn/animate-embed-images/master/preview.png)
 
 
 Return Promise with further data:
-```json
+```code
 {
    status         -> {String} 'ok' or 'fail'
    message        -> {String} Any text describing status
@@ -22,9 +25,6 @@ Return Promise with further data:
 }
 ```
 
-
-<br>
-
 ### Output example (part of...)
 ```javascript
 lib.properties = {
@@ -42,8 +42,6 @@ lib.properties = {
    preloads: []
 };
 ```
-
-<br>
 
 ### Usage
 ```javascript
