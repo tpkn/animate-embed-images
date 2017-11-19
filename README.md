@@ -25,7 +25,7 @@ Return Promise with further data:
 }
 ```
 
-### Output example (part of...)
+## Output example (part of...)
 ```javascript
 lib.properties = {
    width: 300,
@@ -43,7 +43,7 @@ lib.properties = {
 };
 ```
 
-### Usage
+## Usage
 ```javascript
 const path = require('path');
 const glob = require('glob');
