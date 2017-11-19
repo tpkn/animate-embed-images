@@ -1,3 +1,4 @@
+# Animate Embed Images
 
 Helpful stuff when you need to get single html without external files. Maybe some day Adobe will add this feature.
 
