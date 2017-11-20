@@ -1,4 +1,7 @@
-# Animate Embed Images
+# Adobe Animate. Embed Images
+
+Module for Adobe Animate that inserts image assets inside js file
+
 
 Helpful stuff when you need to get single html without external files. Maybe some day Adobe will add this feature.
 
@@ -55,7 +58,7 @@ glob('test/**/!(*.b64).js', (err, files) => {
    for(let i = 0, len = files.length; i < len; i++){
       let js_file = path.join(__dirname, files[i]);
       
-      new AnimateEmbedImages(js_file, js_file.replace(/\.js$/i, '.b64.js'))
+      new AnimateEmbedImages(js_file, js_file.replace(/\.(js|html?)$/i, '.b64.$1'))
       .then(data => {
          let table_data = [[chalk.white.bold('N'), chalk.white.bold('SIZE (base64)'), chalk.white.bold('FILE')]];
          let diff_summ = 0;
