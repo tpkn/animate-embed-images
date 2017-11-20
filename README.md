@@ -1,4 +1,4 @@
-# Adobe Animate. Embed Images
+# Animate Embed Images
 
 Module for Adobe Animate that inserts image assets inside js file
 
