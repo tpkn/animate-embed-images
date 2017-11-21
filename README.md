@@ -8,7 +8,7 @@ Helpful stuff when you need to get single html without external files. Maybe som
 ![preview](https://raw.githubusercontent.com/tpkn/animate-embed-images/master/preview.png)
 
 
-Return Promise with further data:
+Callback data structure:
 ```code
 {
    status         -> {String} 'ok' or 'fail'
