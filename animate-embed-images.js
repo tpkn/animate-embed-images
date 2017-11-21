@@ -56,11 +56,11 @@ function AnimateEmbedImages(input_file, output_file){
             if(typeof output_file !== 'string'){
                resolve({status: 'ok', message: 'Done', input_file: input_file, output_file: output_file, js_content: data, images: images_list});
             }else{
-	            fs.writeFile(output_file, data, 'utf8', err => {
-	               if(err) return reject({status: 'fail', message: 'Can\'t write file', input_file: input_file, output_file: output_file});
+               fs.writeFile(output_file, data, 'utf8', err => {
+                  if(err) return reject({status: 'fail', message: 'Can\'t write file', input_file: input_file, output_file: output_file});
 
-	               resolve({status: 'ok', message: 'Done', input_file: input_file, output_file: output_file, js_content: data, images: images_list});
-	            });
+                  resolve({status: 'ok', message: 'Done', input_file: input_file, output_file: output_file, js_content: data, images: images_list});
+               });
             }
          }else{
             reject({status: 'fail', message: 'No images were found', input_file: input_file, output_file: output_file, images: images_list});
