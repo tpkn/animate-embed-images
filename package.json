@@ -6,7 +6,7 @@
       "url": "https://github.com/tpkn/"
    },
    "dependencies": {
-		"base64-img": "latest"
+      "base64-img": "latest"
    },
    "repository": "https://github.com/tpkn/animate-embed-images",
    "license": "MIT",
