@@ -1,5 +1,5 @@
 /*!
- * Animate Embed Images (v1.0.1.20171112), http://tpkn.me/
+ * Animate Embed Images, http://tpkn.me/
  */
 
 const fs = require('fs');
@@ -17,7 +17,7 @@ function AnimateEmbedImages(input_file, output_file){
       fs.readFile(input_file, 'utf8', (err, data) => {
          if(err) return reject({status: 'fail', message: 'Can\'t open file', input_file: input_file, output_file: output_file});
          
-         // Before doing some hard stuff, lets check if all images exist
+         // Before doing some hard stuff, lets check if all images are exist
          let temp_obj;
          while((temp_obj = images_rule.exec(data)) !== null) {
             file_name = path.basename(temp_obj[5]);
@@ -29,7 +29,7 @@ function AnimateEmbedImages(input_file, output_file){
          }
 
          if(images_list.length){
-            return reject({status: 'fail', message: 'Missing some images', input_file: input_file, images: images_list, output_file: output_file});
+            return reject({status: 'fail', message: 'Missing some images', input_file: input_file, output_file: output_file, images: images_list});
          }
 
 
@@ -47,10 +47,6 @@ function AnimateEmbedImages(input_file, output_file){
             return '{type:createjs.AbstractLoader.IMAGE, ' + p1 + '"' + b64_img + '"' + p6;
          });
 
-         // Sort images by size
-         images_list.sort((a, b) => {
-            return a.size < b.size;
-         });
 
          if(images_list.length){
             if(typeof output_file !== 'string'){

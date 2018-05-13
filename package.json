@@ -1,7 +1,7 @@
 {
    "name": "animate-embed-images",
    "main": "animate-embed-images.js",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "author": {
       "url": "https://github.com/tpkn/"
    },
