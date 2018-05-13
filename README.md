@@ -2,31 +2,16 @@
 
 Module for Adobe Animate that inserts image assets inside js file
 
-
 Helpful stuff when you need to get single html without external files. Maybe some day Adobe will add this feature.
 
 ![preview](https://raw.githubusercontent.com/tpkn/animate-embed-images/master/preview.png)
 
 
-Callback data structure:
-```code
-{
-   status         -> {String} 'ok' or 'fail'
-   message        -> {String} Any text describing status
-   input_file     -> {String} Source js file path
-   output_file    -> {String} Output js file path
-   js_content     -> {String} Modified js content
-   images: [
-      {
-         name     -> {String} Image file name
-         path     -> {String} Image path
-         exist    -> {Number} 0 - if image does not exist
-         size     -> {Number} Image file size (bytes)
-         b64_size -> {Number} The size of the image in base64 format (bytes)
-      }
-   ]
-}
+## Installation
+```bash
+npm install animate-embed-images
 ```
+
 
 ## Output example (part of...)
 ```javascript
@@ -87,6 +72,31 @@ glob('test/**/!(*.b64).js', (err, files) => {
       });
    }
 });
-
 ```
+
+
+Callback data structure:
+```code
+{
+   status         -> {String} 'ok' or 'fail'
+   message        -> {String} Any text describing status
+   input_file     -> {String} Source js file path
+   output_file    -> {String} Output js file path
+   js_content     -> {String} Modified js content
+   images: [
+      {
+         name     -> {String} Image file name
+         path     -> {String} Image path
+         exist    -> {Number} 0 - if image does not exist
+         size     -> {Number} Image file size (bytes)
+         b64_size -> {Number} The size of the image in base64 format (bytes)
+      }
+   ]
+}
+```
+
+
+## Changelog 
+#### 2018-01-17:
+- Removed images sorting. That was just for cosmetic purposes at the debug stage.
 
